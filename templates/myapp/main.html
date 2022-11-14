@@ -50,7 +50,7 @@
         <div style="float:right">
          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           {% if user.is_authenticated %}
-         <li style="color:#8ff2b2">Hello,{{user.username}</li>
+         <li style="color:#8ff2b2">Hello,{{user.username}}</li>
 
           <li class="nav-item " align="right">
             <a class="nav-link active text-white" aria-current="page" href="logout" >Logout</a>
@@ -74,10 +74,10 @@
    <h4>List OF Depate Topics</h4>
    <ul>
     
-    <li>Is digital technology making children's lives better?</li>
-    <li>Teachers should be allowed to smack naughty children.</li>
-    <li> Children should be paid to go to school.</li>
-    <li> Books are better than television.</li>
+    {% for topic in topics %}
+     <li>{{topic.name}}</li>
+    {% endfor %}
+    
 </ul>
    
 </div>
